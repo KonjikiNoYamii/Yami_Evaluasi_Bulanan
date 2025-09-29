@@ -52,6 +52,7 @@ body.dark #quotes{
 .listBar {
   list-style: none;
   display: grid;
+  justify-content: center;
   grid-template-columns: 200px 200px 200px;
 }
 .listBar .bar {
@@ -259,3 +260,80 @@ body.dark .suratItem:hover {
   transition: 0.3s;
 }
 
+/* =========================
+   MEDIA QUERY SMARTPHONE
+   ========================= */
+@media (max-width: 600px) {
+
+  /* Navbar */
+  .navbar {
+    grid-template-columns: 50px 1fr 40px; /* logo, links, theme */
+    height: auto;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  /* Navbar links diubah jadi 2 kolom per baris */
+  .listBar {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .navTeks {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Quotes dan judul */
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 60px;
+  }
+
+  #quotes {
+    font-size: 16px;
+    margin-top: 80px;
+  }
+
+  /* List Surat */
+  #list {
+    grid-template-columns: 1fr; /* satu item per baris */
+    margin: 20px auto;
+    width: 95%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .suratItem {
+    padding: 20px;
+    font-size: 16px;
+    width: auto;
+  }
+
+  /* Ayat Surat */
+  #ayatSurat {
+    margin: 80px 10px;
+    padding: 15px;
+    max-width: 100%;
+    grid-auto-rows: auto;
+  }
+
+  #ayatSurat #ayatList .ayatItem {
+    padding: 15px;
+  }
+
+  .ayatAr {
+    font-size: 18px;
+  }
+
+  .ayatNomor {
+    font-size: 14px;
+  }
+}
