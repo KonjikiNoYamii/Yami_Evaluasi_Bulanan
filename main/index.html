@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QurAna</title>
+    <link rel="stylesheet" href="./src/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"></div>
+        <h1>Qur<span class="merah">Ana</span></h1>
+        <ul class="listBar">
+          <li class="bar">
+            <a href="/index.html" class="navTeks"><span class="merah">HOME</span></a>
+          </li>
+          <li class="bar"><a href="" class="navTeks">About</a></li>
+          <li class="bar"><a href="" class="navTeks">Contact</a></li>
+        </ul>
+        <div class="theme"></div>
+      </nav>
+    </header>
+    <main>
+      <h1>Daftar Surat</h1>
+      <p id="quotes">Rasulullah ﷺ bersabda: "Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lain." (HR. Ahmad)</p>
+      <div id="listSurat">
+        <h2>Daftar Surat</h2>
+        <div id="list"></div>
+      </div>
+      <div id="ayatSurat" style="display: none;">
+        <button id="backToList">Kembali</button>
+        <h2 id="namaSurat"></h2>
+        <ul id="ayatList"></ul>
+      </div>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
