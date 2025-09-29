@@ -25,5 +25,4 @@ data.ayat.forEach((a) => {
   ul.appendChild(li);
 });
 
-
 }

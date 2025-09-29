@@ -80,3 +80,9 @@ Web ini dibuat dengan HTML, CSS (grid layout), dan JavaScript, serta memanfaatka
 QurAna hadir sebagai latihan projek kecil yang bermanfaat untuk belajar **JavaScript, manipulasi DOM, dan penggunaan localStorage** dengan konteks Islami 🌙.  
 
 Semoga bermanfaat!
+
+link
+
+https://www.canva.com/design/DAG0Wf7oT6g/3lnDzRQB4lRs9TFo-wzO7g/view?utm_content=DAG0Wf7oT6g&utm_campaign=designshare&utm_medium=link&utm_source=recording_view
+
+https://www.canva.com/design/DAG0Wf7oT6g/PHlmXW8eIWErA-G8-aI40w/edit?utm_content=DAG0Wf7oT6g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
