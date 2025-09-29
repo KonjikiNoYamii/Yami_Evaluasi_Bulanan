@@ -264,42 +264,44 @@ body.dark .suratItem:hover {
 
   /* Navbar compact */
   .navbar {
-    grid-template-columns: 40px 1fr 35px; /* logo lebih kecil, theme juga kecil */
-    height: 50px; /* tinggi navbar lebih kecil */
+    grid-template-columns: 40px 1fr 30px; /* logo, link, theme */
+    height: 50px; /* navbar lebih kecil */
     padding: 5px 10px;
     gap: 5px;
   }
 
+  /* Logo lebih kecil */
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 
+  /* Theme button lebih kecil */
   .theme {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
-  /* Navbar links */
+  /* Navbar links lebih kecil & compact */
   .listBar {
-    grid-template-columns: 1fr; /* satu link per baris supaya compact */
-    gap: 5px;
+    grid-template-columns: 1fr; /* satu link per baris supaya tidak mepet */
+    gap: 3px;
     justify-content: center;
   }
 
   .navTeks {
     font-size: 12px;
-    padding: 5px 8px;
+    padding: 4px 6px;
   }
 
-  /* Quotes dan judul */
+  /* Quotes & headings */
   h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   h2 {
-    font-size: 20px;
-    padding: 8px;
+    font-size: 18px;
+    padding: 6px;
     margin-top: 50px;
   }
 
