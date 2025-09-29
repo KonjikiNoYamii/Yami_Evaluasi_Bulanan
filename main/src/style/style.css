@@ -21,7 +21,7 @@ body.dark {
    ======================= */
 .navbar {
     display: grid;
-    grid-template-columns: 80px repeat(auto-fit, minmax(100px, 1fr)) 60px;
+    grid-template-columns: 60px repeat(auto-fit, minmax(100px, 1fr)) 50px;
     align-items: center;
     gap: 10px;
     padding: 0 20px;
@@ -32,13 +32,15 @@ body.dark {
     position: sticky;
     top: 0;
     z-index: 1000;
+    justify-items: center;
 }
 
 body.dark .navbar {
     background-color: #000;
-    box-shadow: 0 4px 15px rgba(255,255,255,0.7);
+    box-shadow: 0 4px 15px rgba(255,255,255,0.925);
 }
 
+/* Logo */
 .logo {
     width: 60px;
     height: 60px;
@@ -57,7 +59,7 @@ body.dark .navbar {
 
 .navLinks a {
     text-decoration: none;
-    color: #000;
+    color: #000; /* tetap hitam */
     font-weight: bold;
     font-size: 18px;
     text-align: center;
@@ -72,7 +74,7 @@ body.dark .navbar {
 }
 
 body.dark .navLinks a {
-    color: #fff;
+    color: #fff; /* tetap putih di dark mode */
 }
 
 body.dark .navLinks a:hover {
@@ -265,5 +267,11 @@ body.dark #ayatSurat {
     }
     .ayatAr {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navLinks {
+        grid-template-columns: 1fr; /* satu link per baris */
     }
 }
