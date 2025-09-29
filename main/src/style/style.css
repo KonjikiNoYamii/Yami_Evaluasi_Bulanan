@@ -262,74 +262,93 @@ body.dark .suratItem:hover {
 
 @media (max-width: 600px) {
 
-  /* Navbar compact */
+  /* --- Navbar Perbaikan --- */
   .navbar {
-    grid-template-columns: 40px 1fr 30px; /* logo, link, theme */
-    height: 50px; /* navbar lebih kecil */
-    padding: 5px 10px;
-    gap: 5px;
+    /* Atur ulang kolom: HomeIcon | Judul Tengah (h1 atau listBar) | ThemeButton */
+    grid-template-columns: 40px 1fr 40px; /* logo, konten tengah, theme */
+    height: 50px;
+    padding: 0 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.925); /* Shadow lebih tipis */
   }
 
-  /* Logo lebih kecil */
+  /* Logo dan Theme Button lebih kecil */
   .logo {
     width: 35px;
     height: 35px;
   }
-
-  /* Theme button lebih kecil */
   .theme {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    margin-right: 0; /* Hapus margin yang tidak perlu */
   }
 
-  /* Navbar links lebih kecil & compact */
+  /* Sembunyikan daftar navigasi (link Ab, QuranA) pada layar sempit.
+     Biasanya ini diganti dengan "hamburger menu" yang muncul jika diklik.
+     Jika Anda ingin tetap menampilkannya, gunakan 'flex' dan pastikan font-size sangat kecil.
+  */
   .listBar {
-    grid-template-columns: 1fr; /* satu link per baris supaya tidak mepet */
-    gap: 3px;
-    justify-content: center;
+    /* Jika Anda memutuskan untuk menyembunyikannya: */
+    display: none;
+    /* Jika Anda memutuskan untuk menampilkannya dengan font kecil:
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    grid-template-columns: none;
+    */
   }
-
-  .navTeks {
-    font-size: 12px;
-    padding: 4px 6px;
-  }
-
-  /* Quotes & headings */
+  /* Karena listBar disembunyikan, h1 akan mengisi ruang tengah */
   h1 {
-    font-size: 16px;
+    font-size: 18px; /* Judul utama/nama aplikasi */
+    text-align: center;
+  }
+  /* Karena h1 ada di luar .navbar, kita perlu pastikan layout tidak terganggu */
+  /* Asumsi: h1 bukan bagian dari .navbar. Jika h1 adalah bagian dari navbar, posisikan di grid-area tengah. */
+
+  /* --- Quotes & Headings Perbaikan --- */
+  #quotes {
+    font-size: 14px;
+    /* Turunkan margin agar tidak terlalu mepet dengan navbar */
+    margin-top: 60px;
+    padding: 0 10px;
   }
 
   h2 {
-    font-size: 18px;
-    padding: 6px;
-    margin-top: 50px;
+    font-size: 20px;
+    padding: 20px 10px;
+    margin-top: 55px; /* Sesuaikan dengan tinggi navbar 50px */
   }
 
-  #quotes {
-    font-size: 14px;
-    margin-top: 60px;
-  }
-
-  /* List Surat */
+  /* --- List Surat Perbaikan (Daftar Surat) --- */
   #list {
+    /* Ganti grid-template-columns ke 1 kolom penuh */
     grid-template-columns: 1fr;
-    margin: 15px auto;
-    width: 95%;
-    padding: 10px;
-    gap: 10px;
+    /* Hapus margin absolut yang menyebabkan error layout */
+    margin: 20px auto;
+    width: 90%; /* Ambil 90% lebar layar */
+    padding: 15px;
+    gap: 15px;
   }
 
   .suratItem {
-    padding: 15px;
-    font-size: 14px;
+    /* Lebar item surat harus 100% dari parentnya (list) */
+    width: auto;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 20px;
   }
 
-  /* Ayat Surat */
+  .suratItem p {
+    font-size: 16px;
+  }
+
+  /* --- Ayat Surat Perbaikan (Jika masuk ke halaman surat) --- */
   #ayatSurat {
-    margin: 60px 5px;
-    padding: 10px;
-    max-width: 100%;
-    grid-auto-rows: auto;
+    /* Hapus margin-left absolut: 450px */
+    margin: 70px auto 20px auto; /* Margin atas 70px, tengah otomatis */
+    padding: 15px;
+    width: 90%; /* Ambil 90% lebar layar, auto center */
+    max-width: none; /* Hapus batasan max-width */
+    border-radius: 20px;
   }
 
   #ayatSurat #ayatList .ayatItem {
@@ -337,10 +356,46 @@ body.dark .suratItem:hover {
   }
 
   .ayatAr {
-    font-size: 16px;
+    font-size: 20px; /* Ukuran lebih besar agar nyaman dibaca */
   }
 
   .ayatNomor {
-    font-size: 12px;
+    font-size: 14px;
+    margin-left: 5px;
   }
+  
+  /* Tombol Back to List */
+  #backToList {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* --- Tambahan Media Query untuk Tablet (Layar Sedang) --- */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Navbar untuk Tablet */
+    .navbar {
+        grid-template-columns: 50px 1fr auto 70px; /* Lebih lebar */
+        height: 60px;
+    }
+    
+    /* List Surat untuk Tablet (2 Kolom) */
+    #list {
+        grid-template-columns: 1fr 1fr; /* Tampilkan 2 kolom */
+        margin: 50px auto;
+        width: 90%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .suratItem {
+        width: auto; /* Biarkan grid mengatur lebar */
+        padding: 30px;
+    }
+
+    /* Ayat Surat untuk Tablet */
+    #ayatSurat {
+        margin: 100px auto; /* Margin atas menyesuaikan navbar, tengah otomatis */
+        width: 80%;
+    }
 }
