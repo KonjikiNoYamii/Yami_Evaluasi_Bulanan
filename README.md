@@ -82,6 +82,7 @@ QurAna hadir sebagai latihan projek kecil yang bermanfaat untuk belajar **JavaSc
 Semoga bermanfaat!
 
 link
+https://webalquran-kwpyvjhkm-konjiki-no-yamis-projects.vercel.app/
 
 https://www.canva.com/design/DAG0Wf7oT6g/3lnDzRQB4lRs9TFo-wzO7g/view?utm_content=DAG0Wf7oT6g&utm_campaign=designshare&utm_medium=link&utm_source=recording_view
 
